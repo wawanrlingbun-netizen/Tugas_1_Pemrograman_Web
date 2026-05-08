@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Bahan Ajar - SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Informasi Bahan Ajar</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Beranda</a></li>
+                <li><a href="stok.html" class="active">Informasi Bahan Ajar</a></li>
+                <li><a href="tracking.html">Tracking Pengiriman</a></li>
+                <li><button id="logout-btn" class="logout-button">Keluar</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Paragaan Data Bahan Ajar</h2>
+        <button id="add-stock-btn" class="primary-button">Tambah Stok Baru</button>
+
+        <section id="add-stock-form-section" style="display:none; margin-top: 20px;">
+            <h3>Input Bahan Ajar Baru</h3>
+            <form id="new-stock-form" class="stock-form">
+                <input type="text" id="kodeLokasiNew" placeholder="Kode Lokasi" required>
+                <input type="text" id="kodeBarangNew" placeholder="Kode Barang (ASIP4301)" required>
+                <input type="text" id="namaBarangNew" placeholder="Nama Barang" required>
+                <input type="text" id="jenisBarangNew" placeholder="Jenis Barang (BMP)" required>
+                <input type="text" id="edisiNew" placeholder="Edisi" required>
+                <input type="number" id="stokNew" placeholder="Stok" required min="1">
+                <button type="submit" class="success-button">Simpan Stok</button>
+                <button type="button" id="cancel-add-btn" class="secondary-button">Batal</button>
+            </form>
+        </section>
+
+        <div class="table-container" style="margin-top: 20px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cover</th>
+                        <th>Kode Lokasi</th>
+                        <th>Kode Barang</th>
+                        <th>Nama Barang</th>
+                        <th>Jenis</th>
+                        <th>Edisi</th>
+                        <th>Stok</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="stok-table-body">
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

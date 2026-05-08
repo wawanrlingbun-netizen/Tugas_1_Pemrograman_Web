@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Tracking Pengiriman</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Beranda</a></li>
+                <li><a href="stok.html">Informasi Bahan Ajar</a></li>
+                <li><a href="tracking.html" class="active">Tracking Pengiriman</a></li>
+                <li><button id="logout-btn" class="logout-button">Keluar</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="tracking-input">
+            <form id="tracking-form">
+                <label for="nomor-do">Input: Nomor Delivery Order</label>
+                <input type="text" id="nomor-do" name="nomor-do" required placeholder="Contoh: 2023001234">
+                <button type="submit">Cari</button>
+            </form>
+        </section>
+
+        <section id="tracking-result" class="tracking-result" style="display:none;">
+            <div class="summary-box">
+                <h3 id="nama-penerima">Nama Penerima: </h3>
+                <p>Nomor DO: <span id="nomor-do-display"></span></p>
+                <p>Status: <strong id="status-pengiriman" class="status-badge"></strong></p>
+                
+                <hr>
+
+                <h4>Detail Pengiriman</h4>
+                <div class="detail-grid">
+                    <p><strong>Ekspedisi:</strong> <span id="ekspedisi-detail"></span></p>
+                    <p><strong>Tanggal Kirim:</strong> <span id="tanggal-kirim-detail"></span></p>
+                    <p><strong>Jenis Paket:</strong> <span id="paket-detail"></span></p>
+                    <p><strong>Total Pembayaran:</strong> <span id="total-detail"></span></p>
+                </div>
+            </div>
+
+            <div class="timeline-box">
+                <h4>Perjalanan Paket</h4>
+                <ul class="timeline" id="perjalanan-list">
+                    </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
